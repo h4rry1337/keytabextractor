@@ -222,8 +222,8 @@ def main():
     parser = argparse.ArgumentParser(prog="keytabextractor.py")
     parser.add_argument("keytab", help=".keytab file (0x0501 / 0x0502)")
     parser.add_argument("examples:", help="./keytabextractor.py [file.keytab] or ./keytabextractor.py [file.keytab] --output hashes.txt --format [hashcat/john]")
-    parser.add_argument("-o", "--output", required=True, help="Base output filename (will create multiple files with hash type suffix)")
-    parser.add_argument("--format", choices=["hashcat", "john"], required=True, help="Target output format")
+    parser.add_argument("-o", "--output", required=False, help="Base output filename (will create multiple files with hash type suffix)")
+    parser.add_argument("--format", choices=["hashcat", "john"], required=False, help="Target output format")
     parser.add_argument("--verbose", action="store_true", help="Show detailed parsing information")
     args = parser.parse_args()
     
